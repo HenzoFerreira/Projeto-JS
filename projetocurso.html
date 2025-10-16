@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spartan Fit</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <!--Logo-->
+        <div class="logo">
+            <img src="/assets/Spartan_Fit_Logo-removebg-preview.png"
+                alt="Logo da marca">
+        </div>
+
+    <nav class="main-nav">
+        <ul>
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Sobre</a></li>
+
+            <li class="nav-item dropdown">
+                <a href="#" class="drop-toggle">Produtos</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Whey Max</a></li>
+                    <li><a href="#">Whey Growth</a></li>
+                    <li><a href="#">Whey Integral</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Contato</a></li>
+        </ul>
+    </nav>
+</header><br>
+    <main>
+        <!--Banner-->
+        <section>
+            <div class="banner">
+                <img src="/assets/Spartan Fit Banner.png" alt="Banner da Marca">
+            </div>
+        </section><br><br><br><br>
+        <!--Produtos-->
+        <section class="produtos-section">
+            <h2>Produtos:</h2>
+
+            <div class="produtos-container">
+                <div class="produto">
+                    <img src="/assets/Whey Max.png" alt="Whey Max Titanium">
+                    <h3>Whey Max</h3>
+                    <p>15g de proteína por dose. Ideal para ganho de massa muscular.</p>
+                    <button>Ver mais</button>
+                </div>
+
+                <div class="produto">
+                    <img src="/assets/Whey Growth.png" alt="Whey Growth">
+                    <h3>Whey Growth</h3>
+                    <p>80% de proteína pura com baixo teor de gordura e açúcar.</p>
+                    <button>Ver mais</button>
+                </div>
+
+                <div class="produto">
+                    <img src="/assets/Whey Integral.jpg" alt="Whey Hidro">
+                    <h3>Whey Integral</h3>
+                    <p>21g de proteína isolada e de rápida absorção.</p>
+                    <button>Ver mais</button>
+                </div>
+            </div>
+        </section><br><br><br><br>
+        <!--Contato-->
+        <section id="contato" class="section">
+            <form id="econtato">
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome" id="nome" required><br>
+
+                <label for="telefone">Telefone:</label>
+                <input type="tel" name="telefone" id="telefone" required><br>
+
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required><br>
+
+                <label for="duvida">Dúvida:</label>
+                <textarea name="duvida" id="duvida" rows="4" cols="30" placeholder="Digite aqui sua dúvida..."
+                    required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main><br><br><br><br><br><br><br><br><br>
+    <footer>
+        <p>Contato: (11) 95322-4263</p>
+        <p>Todos os direitos reservados &copy; 2025</p>
+    </footer>
+</body>
+<script>
+    // Seleciona o botão e o menu
+const toggle = document.querySelector(".drop-toggle");
+const menu = document.querySelector(".dropdown-menu");
+
+// Ao clicar em "Produtos", alterna o menu
+toggle.addEventListener("click", (e) => {
+  e.preventDefault(); // Impede o link de atualizar a página
+  menu.classList.toggle("active");
+});
+
+// Fecha o menu se clicar fora dele
+document.addEventListener("click", (e) => {
+  if (!e.target.closest(".dropdown")) {
+    menu.classList.remove("active");
+  }
+});
+</script>
+</html>
